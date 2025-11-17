@@ -1,0 +1,498 @@
+/* ========================
+   MENÚ SUPERIOR
+   ======================== */
+   .topheader {
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+  }
+  
+  .logo img {
+    display: block;
+  }
+  
+  .Menu-Horizontal {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Menu-Horizontal li a {
+    text-decoration: none;
+    color: #064c80;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .Menu-Horizontal li a:hover {
+    color: #00a4ff;
+  }
+  
+  /* ========================
+       HERO / INICIO
+       ======================== */
+  .seccion-creditos {
+    padding: 120px 20px 60px; /* espacio por el menú fijo */
+    background: linear-gradient(135deg, #f3f7ff, #e2f5ff);
+  }
+  
+  .cont-gral-creditos {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cont-cred-texto {
+    flex: 1 1 320px;
+  }
+  
+  .cont-cred-texto h1 {
+    font-size: 2.6rem;
+    color: #064c80;
+    margin-bottom: 8px;
+  }
+  
+  .cont-cred-texto h2 {
+    font-size: 1.4rem;
+    color: #0d80c3;
+    margin-bottom: 16px;
+  }
+  
+  .cont-cred-texto p {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primario {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #00a4ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .btn-primario:hover {
+    background-color: #18b5ff;
+  }
+  
+  .cont-cred-img {
+    flex: 1 1 320px;
+    text-align: center;
+  }
+  
+  .cont-cred-img img {
+    max-width: 420px;
+    width: 100%;
+  }
+  
+  /* ========================
+       PROGRAMAS
+       ======================== */
+  .seccion-seguros {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  }
+  
+  .cont-gral-seguros {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .cont-seg-texto h2 {
+    color: #064c80;
+    margin-bottom: 10px;
+  }
+  
+  .cont-seg-texto p {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .cont-seg-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .tarjeta-programa {
+    background-color: #f5f8ff;
+    border-radius: 16px;
+    padding: 16px 18px;
+    max-width: 260px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    text-align: center;
+  }
+  
+  .tarjeta-programa img {
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-programa h3 {
+    font-size: 1rem;
+    color: #064c80;
+    margin-bottom: 8px;
+  }
+  
+  .tarjeta-programa p {
+    font-size: 0.9rem;
+    color: #444444;
+    line-height: 1.5;
+  }
+  
+  /* ===== Experiencias (layout 2 columnas) ===== */
+  .seccion-experiencias {
+    background: #fff;
+    padding: 50px 20px;
+  }
+  .exp-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .exp-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .exp-title {
+    font-size: 2rem;
+    margin: 0;
+    color: #064c80;
+  }
+  
+  /* Grid 2x2 de tarjetas para 3D */
+  .exp3d-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  
+  /* Tarjetas */
+  .exp-card,
+  .exp-card360 {
+    background: #fff;
+    border: 1px solid #efd8cf; /* tono rosado muy suave */
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  .exp-card h4,
+  .exp-card360 h4 {
+    margin: 0 0 6px;
+    color: #222;
+  }
+  .exp-card p,
+  .exp-card360 p {
+    margin: 0 0 10px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .exp-card:hover,
+  .exp-card360:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+  }
+  
+  /* Botón ya existe (.btn-primario); opcional: tamaño reducido en tarjetas */
+  .exp-card .btn-primario,
+  .exp-card360 .btn-primario {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* Video opcional dentro de la tarjeta 360 */
+  .exp-video {
+    margin-top: 12px;
+  }
+  .exp-video iframe {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .exp-layout {
+      grid-template-columns: 1fr;
+    }
+    .exp3d-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .exp3d-grid {
+      grid-template-columns: 1fr;
+    }
+    .exp-title {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* ========================
+       TEST VOCACIONAL
+       ======================== */
+  .seccion-test {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  }
+  
+  .cont-test {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cont-test-texto {
+    flex: 1 1 320px;
+  }
+  
+  .cont-test-texto h2 {
+    color: #064c80;
+    margin-bottom: 10px;
+  }
+  
+  .cont-test-texto p {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .cont-test-texto ul {
+    padding-left: 18px;
+    color: #333333;
+    line-height: 1.5;
+  }
+  
+  .cont-test-img {
+    flex: 1 1 260px;
+    text-align: center;
+  }
+  
+  .cont-test-img img {
+    max-width: 320px;
+    width: 100%;
+  }
+  
+  /* ========================
+       FORMULARIO / CONTACTO
+       ======================== */
+  .seccion-formulario {
+    background-color: #e2f5ff;
+    padding: 50px 20px;
+  }
+  
+  .cont-gral-formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 24px 24px 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .cont-gral-formulario h2 {
+    color: #064c80;
+    margin-bottom: 6px;
+  }
+  
+  .cont-gral-formulario p {
+    color: #333333;
+    margin-bottom: 18px;
+  }
+  
+  .campo {
+    margin-bottom: 14px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #0d80c3;
+  }
+  
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario select,
+  .formulario textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1.5px solid #0d80c3;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+  
+  .formulario textarea {
+    resize: vertical;
+  }
+  
+  .formulario button {
+    background-color: #00a4ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  
+  .formulario button:hover {
+    background-color: #18b5ff;
+  }
+  
+  /* ========================
+       FOOTER
+       ======================== */
+  .seccion-footer {
+    background-color: #dff5ee;
+    padding: 40px 20px;
+  }
+  
+  .cont-gral-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-info,
+  .footer-redes,
+  .footer-politica {
+    flex: 1 1 260px;
+  }
+  
+  .footer-info h3,
+  .footer-redes h3,
+  .footer-politica h3 {
+    color: #064c80;
+    margin-bottom: 10px;
+  }
+  
+  .footer-info p {
+    color: #093435;
+    line-height: 1.6;
+  }
+  
+  .lista-redes,
+  .lista-proteccion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .lista-redes li,
+  .lista-proteccion li {
+    margin-bottom: 6px;
+  }
+  
+  .lista-redes li a,
+  .lista-proteccion li a {
+    text-decoration: none;
+    color: #093435;
+    font-size: 0.95rem;
+  }
+  
+  .lista-redes li a:hover,
+  .lista-proteccion li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ========================
+       RESPONSIVE
+       ======================== */
+  @media (max-width: 768px) {
+    .Menu-Horizontal {
+      gap: 10px;
+      font-size: 0.8rem;
+    }
+  
+    .cont-cred-texto h1 {
+      font-size: 2.2rem;
+    }
+  
+    .cont-test {
+      flex-direction: column-reverse;
+    }
+  }
+  /* ===== Combo Box del Menú ===== */
+  .nav-combo {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1.5px solid #0d80c3;
+    font-size: 0.9rem;
+    color: #064c80;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .nav-combo:hover {
+    border-color: #00a4ff;
+  }
+  
+  /* ===== Burbuja flotante del chatbot ===== */
+  .chatbot-bubble {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 70px;
+    height: 70px;
+    background: #00a4ff;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .chatbot-bubble img {
+    width: 70%;
+  }
+  
+  .chatbot-bubble:hover {
+    transform: scale(1.1);
+    background: #18b5ff;
+  }
+  
+  /* En pantallas pequeñas: ocultar menú horizontal y dejar solo el combo */
+  @media (max-width: 768px) {
+    .Menu-Horizontal {
+      display: none;
+    }
+    .nav-combo {
+      display: block;
+    }
+  
